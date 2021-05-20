@@ -24,7 +24,7 @@ const options = {
 
 // axios.defaults.baseURL = 'http://127.0.0.1:8000'
 // axios.defaults.baseURL = 'https://onefocus.herokuapp.com'
-axios.defaults.baseURL = process.env.baseURL || 'http://127.0.0.1:8000'
+axios.defaults.baseURL = process.env.APP_URL || 'http://127.0.0.1:8000'
 
 // icons, css
 import '@fortawesome/fontawesome-free/css/all.css'
