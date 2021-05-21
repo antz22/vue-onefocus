@@ -24,7 +24,7 @@ const options = {
 
 // axios.defaults.baseURL = 'http://127.0.0.1:8000'
 // axios.defaults.baseURL = 'https://onefocus.herokuapp.com'
-if (process.env.APP_URL) {
+if (process.env) {
   axios.defaults.baseURL = 'https://onefocus.herokuapp.com'
 } else {
   axios.defaults.baseURL = 'http://127.0.0.1:8000'
