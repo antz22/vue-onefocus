@@ -22,15 +22,13 @@ const options = {
   inverse: false
 }
 
-// axios.defaults.baseURL = 'http://127.0.0.1:8000'
-// axios.defaults.baseURL = 'https://onefocus.herokuapp.com'
-if (process.env) {
+// if the process is running on the heroku server (production)
+if (process.env.PORT) {
   axios.defaults.baseURL = 'https://onefocus.herokuapp.com'
+// if the process is accessed from local port (development)
 } else {
   axios.defaults.baseURL = 'http://127.0.0.1:8000'
 }
-// axios.defaults.baseURL = process.env.APP_URL || 'http://127.0.0.1:8000'
-// axios.defaults.baseURL = 'https://onefocus.herokuapp.com' || 'http://127.0.0.1:8000'
 
 // icons, css
 import '@fortawesome/fontawesome-free/css/all.css'
