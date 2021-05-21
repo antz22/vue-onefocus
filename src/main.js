@@ -23,7 +23,7 @@ const options = {
 }
 
 const PROD_FRONT_URL = 'https://onefocus.netlify.app'
-const PROD_BACK_URL = 'https://onefocus.netlify.app'
+const PROD_BACK_URL = 'https://onefocus.herokuapp.com'
 const DEV_URL = 'http://127.0.0.1:8000'
 
 axios.defaults.baseURL = (location.origin == PROD_FRONT_URL) ? PROD_BACK_URL : DEV_URL
