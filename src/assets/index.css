@@ -145,10 +145,10 @@ body {
 }
 
 .task-form > div > button {
-  @apply shadow-sm focus:ring-indigo-500 focus:border-indigo-500;
+  @apply shadow-sm focus:ring-indigo-500 focus:border-indigo-500 hover:bg-blue-300;
   border-radius: 6px;
   height: 40px;
-  width: 112px;
+  width: 132px;
   margin-top: 48px;
   background-color: rgb(129, 223, 255);
 }

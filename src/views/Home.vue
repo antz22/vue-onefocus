@@ -8,8 +8,8 @@
         <p>{{ quote.author }}</p>
       </div>
     </div>
-    <h1 class="header2 mt-4">Tasks</h1>
-    <div class="todos">
+    <h1 class="header2 mt-2">Tasks</h1>
+    <div>
       <div v-if="tasks.length === 0">
         <div class="task-header">
           <h1>No tasks. All done!</h1>
@@ -25,7 +25,7 @@
 
             <div class="row1">
               <!--Task-->
-              <div class="inline-block">
+              <div class="inline-block task-header2">
                 <h1 class="font-bold">{{ task.content }}</h1> 
               </div>
 
@@ -41,7 +41,7 @@
                 <!--Motivation -->
                 <p v-if="task.motivation != ''">{{ task.motivation }}</p>
               </div>
-              <div class="inline-block float-right">
+              <div class="inline-block float-right checkbox">
                 <!--Completed or not? -->
                 <div v-if="!task.completed">
                   <CheckBox @click="completeTask(task.id, true); getTasks()" />
@@ -290,11 +290,10 @@ export default {
 .display-task:hover .archive-task > button {
   height: auto;
   opacity: 1;
-  /* transition: height 0ms 0ms, opacity 600ms 0ms; */
 }
 
 .archive-task {
-  margin-top: 32px;
+  margin-top: 22px;
   margin-right: 32px;
   float: right;
 }
@@ -304,16 +303,14 @@ export default {
   height: 0;
   opacity: 0;
   overflow: hidden;
-  /* transition: height 0ms 400ms, opacity 0ms 0ms; */
   font-size: 18px;
   border-radius: 2px;
   width: 80px;
-  /* background-color: rgb(129, 223, 255); */
   background-color: #12a7cc;
 
 }
 
-.row1 > div > h1 {
+.task-header2 {
   font-size: 24px;
   line-height: 32px;
   text-align: left;
@@ -326,13 +323,17 @@ export default {
   font-size: 20px;
   line-height: 28px;
   margin-left: 32px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+}
+
+.checkbox {
+  margin-top: -12px;
 }
 
 .row3 {
   text-align: left;
   margin-left: 32px;
-  margin-bottom: 32px;
+  margin-bottom: 22px;
 }
 
 .goals {
@@ -384,8 +385,32 @@ export default {
   font-size: 30px;
   line-height: 36px;
   text-align: center;
-  margin-top: 16px;
   margin-bottom: 32px;
+}
+
+
+@media (min-width: 800px) {
+  .display-task {
+    margin: 42px;
+    margin-top: 12px;
+  }
+
+  .display-goal {
+    margin: 42px;
+    margin-top: 12px;
+  }
+
+  .goal-header > h1, .task-header > h1 {
+    margin-bottom: 22px;
+    margin-top: -8px;
+  }
+
+  .task-header2 {
+    font-size: 24px;
+    line-height: 26px;
+    margin-top: 22px;
+    margin-bottom: 22px;
+  }
 }
 
 
