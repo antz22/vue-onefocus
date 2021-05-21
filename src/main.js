@@ -23,13 +23,16 @@ const options = {
 }
 
 // if the process is running on the heroku server (production)
-if (process.env.PORT) {
+if (process.env.APP_URL) {
   axios.defaults.baseURL = 'https://onefocus.herokuapp.com'
 // if the process is accessed from local port (development)
 } else {
   axios.defaults.baseURL = 'http://127.0.0.1:8000'
 }
 
+const url = process.env.APP_URL || 'http://127.0.0.1:8000'
+
+console.log('url: ', url)
 console.log(process.env.PORT)
 console.log(process.env.BASE_URL)
 console.log(process.env.APP_URL)
