@@ -57,6 +57,18 @@ body {
   font-weight: 700;
 }
 
+.text {
+  padding-left: 3.0rem;
+  padding-right: 3.0rem;
+  text-align: left;
+  font-size: 1.15rem;
+  line-height: 2.0rem;
+}
+
+.text > p {
+  padding-top: 1.0rem;
+}
+
 .user-form {
   text-align: center;
   font-size: 20px;
