@@ -30,6 +30,11 @@ if (process.env.PORT) {
   axios.defaults.baseURL = 'http://127.0.0.1:8000'
 }
 
+console.log(process.env.PORT)
+console.log(process.env.BASE_URL)
+console.log(process.env.APP_URL)
+console.log(process.env.DATABASE_URL)
+
 // icons, css
 import '@fortawesome/fontawesome-free/css/all.css'
 import '@fortawesome/fontawesome-free/js/all.js'
