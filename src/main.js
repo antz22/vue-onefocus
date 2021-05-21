@@ -22,19 +22,24 @@ const options = {
   inverse: false
 }
 
+const PROD_URL = 'https://onefocus.netlify.app'
+const DEV_URL = 'http://127.0.0.1:8000'
+
 // if the process is running on the heroku server (production)
-if (process.env.APP_URL) {
+if (location.origin == PROD_URL) {
   axios.defaults.baseURL = 'https://onefocus.herokuapp.com'
 // if the process is accessed from local port (development)
 } else {
   axios.defaults.baseURL = 'http://127.0.0.1:8000'
 }
 
-const url = process.env.APP_URL || 'http://127.0.0.1:8000'
+axios.defaults.baseURL = (location.origin == PROD_URL) ? PROD_URL : DEV_URL
 
-console.log('url: ', url)
+console.log('url: ', axios.defaults.baseURL)
 console.log(process.env.PORT)
 console.log(process.env.BASE_URL)
+console.log(process.env.URL)
+console.log(location.origin)
 console.log(process.env.APP_URL)
 console.log(process.env.DATABASE_URL)
 
