@@ -24,8 +24,13 @@ const options = {
 
 // axios.defaults.baseURL = 'http://127.0.0.1:8000'
 // axios.defaults.baseURL = 'https://onefocus.herokuapp.com'
+if (process.env.APP_URL) {
+  axios.defaults.baseURL = 'https://onefocus.herokuapp.com'
+} else {
+  axios.defaults.baseURL = 'http://127.0.0.1:8000'
+}
 // axios.defaults.baseURL = process.env.APP_URL || 'http://127.0.0.1:8000'
-axios.defaults.baseURL = 'https://onefocus.herokuapp.com' || 'http://127.0.0.1:8000'
+// axios.defaults.baseURL = 'https://onefocus.herokuapp.com' || 'http://127.0.0.1:8000'
 
 // icons, css
 import '@fortawesome/fontawesome-free/css/all.css'
