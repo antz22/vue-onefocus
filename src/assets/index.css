@@ -120,11 +120,11 @@ body {
   text-align: center;
   font-size: 20px;
   line-height: 28px;
+  margin-bottom: 40px;
 }
 
 .task-form > div {
   @apply space-y-10;
-  margin-bottom: 40px;
 }
 
 .task-form > div > input {

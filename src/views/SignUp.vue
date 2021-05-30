@@ -72,6 +72,10 @@ export default {
         axios
           .post("/api/v1/users/", formData)
           .then(response => {
+
+            console.log(response)
+
+
             toast({
               message: 'Account created, please log in.',
               type: 'is-success',
